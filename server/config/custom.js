@@ -113,6 +113,8 @@ module.exports.custom = {
 
   gravatarBaseUrl: process.env.GRAVATAR_BASE_URL,
 
+  socketPath: parsedBasedUrl.pathname.replace(/\/$/, '') + '/socket.io',
+
   /* Internal */
 
   internalAccessToken: process.env.INTERNAL_ACCESS_TOKEN,

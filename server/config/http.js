@@ -55,6 +55,7 @@ module.exports.http = {
     poweredBy: false,
 
     www(req, res, next) {
+      res.locals.basePath = sails.config.custom.baseUrlPath || '';
       const middleware = serveStatic(sails.config.paths.public, {
         maxAge: sails.config.http.cache,
         immutable: req.url.startsWith('/assets/'),

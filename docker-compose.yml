@@ -1,6 +1,7 @@
 services:
   planka:
-    image: ghcr.io/plankanban/planka:latest
+    image: ghcr.io/ratniv/planka:latest
+    platform: linux/amd64
     restart: on-failure
     volumes:
       - data:/app/data
@@ -12,7 +13,7 @@ services:
     ports:
       - 3000:1337
     environment:
-      - BASE_URL=http://localhost:3000
+      - BASE_URL=http://as6210t:3000/planka
       - DATABASE_URL=postgresql://postgres@postgres/planka
 
       # Optionally store the database password in secrets:

@@ -10,6 +10,7 @@
  */
 
 module.exports.sockets = {
+  path: require('./custom').socketPath,
   /**
    *
    * `transports`
